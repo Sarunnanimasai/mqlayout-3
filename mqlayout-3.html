@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @media all and (max-width: 1280px) {
+        #container {
+          width: 1000px;
+          height: 500px;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(4, 1fr);
+          grid-template-areas:
+            "nav nav nav"
+            "a a b"
+            "a a c"
+            "a a d";
+          gap: 10px;
+          margin: auto;
+        }
+      }
+      @media all and (max-width: 1024px) {
+        #container {
+          width: 500px;
+          height: 500px;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+          grid-template-areas:
+            "nav nav nav"
+            "a a a"
+            "b c d";
+          gap: 10px;
+          margin: auto;
+        }
+      }
+      @media all and (max-width: 480px) {
+        #container {
+          width: 500px;
+          height: 500px;
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(5, 1fr);
+          grid-template-areas:
+            "nav"
+            "a"
+            "b"
+            "c"
+            "d";
+          gap: 10px;
+          margin: auto;
+        }
+      }
+      #Navigation {
+        background-color: yellow;
+        grid-area: nav;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        font-size: larger;
+        font-weight: bold;
+        padding-left: 10px;
+      }
+      #LEFTBOX {
+        background-color: red;
+        grid-area: a;
+        display: flex;
+        align-items: center;
+        font-size: larger;
+        font-weight: bold;
+        padding-left: 10px;
+      }
+      #RIGHTBOX1 {
+        background-color: green;
+        grid-area: b;
+        display: flex;
+        align-items: center;
+        font-size: larger;
+        font-weight: bold;
+        padding-left: 10px;
+      }
+      #RIGHTBOX2 {
+        background-color: green;
+        grid-area: c;
+        display: flex;
+        align-items: center;
+        font-size: larger;
+        font-weight: bold;
+        padding-left: 10px;
+      }
+      #RIGHTBOX3 {
+        background-color: green;
+        grid-area: d;
+        display: flex;
+        align-items: center;
+        font-size: larger;
+        font-weight: bold;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="Navigation">Navigation</div>
+      <div id="LEFTBOX">LEFTBOX</div>
+      <div id="RIGHTBOX1">RIGHT BOX 1</div>
+      <div id="RIGHTBOX2">RIGHT BOX 2</div>
+      <div id="RIGHTBOX3">RIGHT BOX 3</div>
+    </div>
+  </body>
+</html>
